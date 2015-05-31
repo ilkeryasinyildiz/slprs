@@ -1,0 +1,1 @@
+Faster, smarter and more accurate solution for license plate recognition problem.
