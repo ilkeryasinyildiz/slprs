@@ -230,7 +230,9 @@ MyFrame::MyFrame(const wxString& title)
 	btnClearLists = new wxButton(this, wxID_CLEAR, wxT("Temizle"), wxPoint(120, 265), SIZE_BUTTON_SMALL, 0);
 
 	/* READ PIC */
-	Mat srcBGR = imread("D:/opencv/resim/plaka/plaka01.jpg");
+	//Mat srcBGR = imread("C:/Users/MANGAKA/Desktop/plakalar/arac01.jpg");
+	//srcBGR.create(Size(320, 240), CV_8UC3);
+	Mat srcBGR = Mat::zeros(320, 240, CV_8UC3);
 	Mat srcRGB = srcBGR.clone();
 	convertBGR2RGB(srcBGR, srcRGB);
 	wxImage* resim1 = new wxImage(srcRGB.cols, srcRGB.rows, srcRGB.data, true);
